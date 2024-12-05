@@ -6,4 +6,10 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Lexicom.Validation.Amenities" Version="8.0.96" />
+    <PackageReference Include="Lexicom.Validation.Options" Version="8.0.96" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="9.0.0" />
+  </ItemGroup>
+
 </Project>
