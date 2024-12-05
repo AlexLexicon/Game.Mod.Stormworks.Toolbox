@@ -1,12 +1,57 @@
-﻿using System.Configuration;
-using System.Data;
-using System.Windows;
+﻿using Game.Mod.Stormworks.Toolbox.Application.Database.Extensions;
+using Game.Mod.Stormworks.Toolbox.Application.Extensions;
+using Game.Mod.Stormworks.Toolbox.Client.Windows.Extensions;
+using Game.Mod.Stormworks.Toolbox.Client.Windows.Presentation.Views;
+using Game.Mod.Stormworks.Toolbox.Client.Windows.ViewModels;
+using Lexicom.DependencyInjection.Primitives.Extensions;
+using Lexicom.DependencyInjection.Primitives.For.Wpf.Extensions;
+using Lexicom.Mvvm.Amenities.Extensions;
+using Lexicom.Mvvm.Extensions;
+using Lexicom.Mvvm.For.Wpf.Extensions;
+using Lexicom.Supports.Wpf.Extensions;
+using Lexicom.Validation.For.Wpf.Extensions;
+using Lexicom.Wpf.DependencyInjection;
 
 namespace Game.Mod.Stormworks.Toolbox.Client.Windows.Presentation;
-/// <summary>
-/// Interaction logic for App.xaml
-/// </summary>
-public partial class App : Application
+public partial class App : System.Windows.Application
 {
-}
+    public App()
+    {
+        var builder = WpfApplication.CreateBuilder(this);
 
+        builder.Services.AddDatabase();
+        builder.Services.AddApplication();
+        builder.Services.AddClient();
+
+        builder.Lexicom(l =>
+        {
+            l.AddMvvm(mvvm =>
+            {
+                mvvm.AddMediatR(mr =>
+                {
+                    mr.AddTileEditor();
+                });
+
+                mvvm.AddViewModel<MainWindowViewModel>(vm =>
+                {
+                    vm.ForWindow<MainWindow>();
+                });
+            });
+
+            l.AddPrimitives(p =>
+            {
+                p.AddGuidProvider();
+                p.AddTimeProvider();
+            });
+
+            l.AddValidation(v =>
+            {
+                v.AddDatabase();
+            });
+        });
+
+        var app = builder.Build();
+
+        app.StartupWindow<MainWindow>();
+    }
+}

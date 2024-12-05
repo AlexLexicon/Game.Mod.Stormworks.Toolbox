@@ -11,6 +11,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Lexicom.DependencyInjection.Primitives" Version="8.0.96" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Game.Mod.Stormworks.Toolbox.Application.Database\Game.Mod.Stormworks.Toolbox.Application.Database.csproj" />
   </ItemGroup>
 

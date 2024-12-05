@@ -8,4 +8,24 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="appsettings.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="appsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Lexicom.DependencyInjection.Primitives.For.Wpf" Version="8.0.96" />
+    <PackageReference Include="Lexicom.Mvvm.For.Wpf" Version="8.0.96" />
+    <PackageReference Include="Lexicom.Validation.For.Wpf" Version="8.0.96" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Game.Mod.Stormworks.Toolbox.Client.Windows\Game.Mod.Stormworks.Toolbox.Client.Windows.csproj" />
+  </ItemGroup>
+
 </Project>
