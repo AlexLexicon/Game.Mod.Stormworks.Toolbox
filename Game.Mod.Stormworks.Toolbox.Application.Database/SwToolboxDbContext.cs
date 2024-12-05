@@ -9,11 +9,11 @@ public class SwToolboxDbContext : DbContext
         Database.EnsureCreated();
     }
 
-    public DbSet<Block> Blocks { get; set; }
-    public DbSet<BlockToGameVersion> BlocksToGameVersions { get; set; }
+    public DbSet<Component> Blocks { get; set; }
+    public DbSet<ComponentToGameVersion> ComponentsToGameVersions { get; set; }
     public DbSet<GameVersion> GameVersions { get; set; }
-    public DbSet<BlockTag> BlockTags { get; set; }
-    public DbSet<BlockTagToGameVersion> BlockTagsToGameVersions { get; set; }
+    public DbSet<ComponentTag> BlockTags { get; set; }
+    public DbSet<ComponentToComponentTag> ComponentsToComponentTags { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

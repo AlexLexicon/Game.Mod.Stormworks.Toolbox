@@ -1,7 +1,7 @@
 ﻿using System.Windows;
 
 namespace Game.Mod.Stormworks.Toolbox.Client.Windows.Presentation.Views;
-public partial class MainWindow : Window
+public partial class MainWindowView : Window
 {
-    public MainWindow() => InitializeComponent();
+    public MainWindowView() => InitializeComponent();
 }

@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Game.Mod.Stormworks.Toolbox.Application.Database.Entities;
-public class Block : IEntityTypeConfiguration<Block>
+public class Component : IEntityTypeConfiguration<Component>
 {
     public required Guid Id { get; init; }
     public required DateTime CreatedDateTimeUtc { get; init; }
@@ -22,10 +22,10 @@ public class Block : IEntityTypeConfiguration<Block>
 
     public required DateTime ModifiedDateTimeUtc { get; set; }
 
-    public void Configure(EntityTypeBuilder<Block> builder)
+    public void Configure(EntityTypeBuilder<Component> builder)
     {
         builder
-            .ToTable("Blocks")
-            .HasKey(b => b.Id);
+            .ToTable("Components")
+            .HasKey(c => c.Id);
     }
 }

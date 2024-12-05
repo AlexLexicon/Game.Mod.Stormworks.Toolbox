@@ -2,22 +2,22 @@
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Game.Mod.Stormworks.Toolbox.Application.Database.Entities;
-public class BlockTagToGameVersion : IEntityTypeConfiguration<BlockTagToGameVersion>
+public class ComponentToGameVersion : IEntityTypeConfiguration<ComponentToGameVersion>
 {
-    public required Guid BlockTagId { get; init; }
+    public required Guid ComponentId { get; init; }
     public required Guid GameVersionId { get; init; }
     public required DateTime CreatedDateTimeUtc { get; init; }
 
     public required DateTime ModifiedDateTimeUtc { get; set; }
 
-    public void Configure(EntityTypeBuilder<BlockTagToGameVersion> builder)
+    public void Configure(EntityTypeBuilder<ComponentToGameVersion> builder)
     {
         builder
-            .ToTable("BlockTagsToGameVersions")
-            .HasKey(bttgv => new
+            .ToTable("ComponentsToGameVersions")
+            .HasKey(ctgv => new
             {
-                bttgv.BlockTagId,
-                bttgv.GameVersionId,
+                ctgv.ComponentId,
+                ctgv.GameVersionId,
             });
     }
 }
