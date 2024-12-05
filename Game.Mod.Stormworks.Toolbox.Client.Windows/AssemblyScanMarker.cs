@@ -1,6 +1,4 @@
 ﻿namespace Game.Mod.Stormworks.Toolbox.Client.Windows;
-
-public class Class1
+internal class AssemblyScanMarker
 {
-
 }

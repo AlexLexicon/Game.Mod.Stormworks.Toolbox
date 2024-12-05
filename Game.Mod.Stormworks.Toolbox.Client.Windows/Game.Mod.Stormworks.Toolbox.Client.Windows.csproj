@@ -6,4 +6,12 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Lexicom.Mvvm.Amenities" Version="8.0.96" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Game.Mod.Stormworks.Toolbox.Application\Game.Mod.Stormworks.Toolbox.Application.csproj" />
+  </ItemGroup>
+
 </Project>
