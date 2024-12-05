@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35527.113 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Game.Mod.Stormworks.Toolbox.Application.Database", "Game.Mod.Stormworks.Toolbox.Application.Database\Game.Mod.Stormworks.Toolbox.Application.Database.csproj", "{6AAB8105-F6E6-4F12-AD3A-B49886DD0984}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Game.Mod.Stormworks.Toolbox.Application", "Game.Mod.Stormworks.Toolbox.Application\Game.Mod.Stormworks.Toolbox.Application.csproj", "{F2E1F690-5001-4A54-A9C8-E2D6DF6DA7F5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Client.Windows", "Client.Windows", "{ADD88564-B9BE-4240-9C27-92096D99C1BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Game.Mod.Stormworks.Toolbox.Client.Windows", "Game.Mod.Stormworks.Toolbox.Client.Windows\Game.Mod.Stormworks.Toolbox.Client.Windows.csproj", "{B7CF573C-DF27-4E94-8554-F5623E670359}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Game.Mod.Stormworks.Toolbox.Client.Windows.Presentation", "Game.Mod.Stormworks.Toolbox.Client.Windows.Presentation\Game.Mod.Stormworks.Toolbox.Client.Windows.Presentation.csproj", "{1ECB0B15-3A37-499C-906E-D05364580BAF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6AAB8105-F6E6-4F12-AD3A-B49886DD0984}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AAB8105-F6E6-4F12-AD3A-B49886DD0984}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AAB8105-F6E6-4F12-AD3A-B49886DD0984}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AAB8105-F6E6-4F12-AD3A-B49886DD0984}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2E1F690-5001-4A54-A9C8-E2D6DF6DA7F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2E1F690-5001-4A54-A9C8-E2D6DF6DA7F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2E1F690-5001-4A54-A9C8-E2D6DF6DA7F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2E1F690-5001-4A54-A9C8-E2D6DF6DA7F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7CF573C-DF27-4E94-8554-F5623E670359}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7CF573C-DF27-4E94-8554-F5623E670359}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7CF573C-DF27-4E94-8554-F5623E670359}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7CF573C-DF27-4E94-8554-F5623E670359}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1ECB0B15-3A37-499C-906E-D05364580BAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1ECB0B15-3A37-499C-906E-D05364580BAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1ECB0B15-3A37-499C-906E-D05364580BAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1ECB0B15-3A37-499C-906E-D05364580BAF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B7CF573C-DF27-4E94-8554-F5623E670359} = {ADD88564-B9BE-4240-9C27-92096D99C1BF}
+		{1ECB0B15-3A37-499C-906E-D05364580BAF} = {ADD88564-B9BE-4240-9C27-92096D99C1BF}
+	EndGlobalSection
+EndGlobal
