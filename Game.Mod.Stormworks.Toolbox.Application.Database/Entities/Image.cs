@@ -2,19 +2,18 @@
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Game.Mod.Stormworks.Toolbox.Application.Database.Entities;
-public class ComponentTag : IEntityTypeConfiguration<ComponentTag>
+public class Image : IEntityTypeConfiguration<Image>
 {
     public required Guid Id { get; init; }
     public required DateTime CreatedDateTimeUtc { get; init; }
 
-    public required string Value { get; init; }
-
+    public required string Base64Data { get; set; }
     public required DateTime ModifiedDateTimeUtc { get; set; }
 
-    public void Configure(EntityTypeBuilder<ComponentTag> builder)
+    public void Configure(EntityTypeBuilder<Image> builder)
     {
         builder
-            .ToTable("ComponentTags")
-            .HasKey(ct => ct.Id);
+            .ToTable("Images")
+            .HasKey(i => i.Id);
     }
 }

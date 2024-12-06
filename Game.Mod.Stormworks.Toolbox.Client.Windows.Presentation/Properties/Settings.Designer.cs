@@ -37,7 +37,7 @@ namespace Game.Mod.Stormworks.Toolbox.Client.Windows.Presentation.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        [global::System.Configuration.DefaultSettingValueAttribute("128")]
         public double WindowOptions_Top {
             get {
                 return ((double)(this["WindowOptions_Top"]));
@@ -49,7 +49,7 @@ namespace Game.Mod.Stormworks.Toolbox.Client.Windows.Presentation.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        [global::System.Configuration.DefaultSettingValueAttribute("128")]
         public double WindowOptions_Left {
             get {
                 return ((double)(this["WindowOptions_Left"]));
@@ -61,7 +61,7 @@ namespace Game.Mod.Stormworks.Toolbox.Client.Windows.Presentation.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        [global::System.Configuration.DefaultSettingValueAttribute("800")]
         public double WindowOptions_Width {
             get {
                 return ((double)(this["WindowOptions_Width"]));
@@ -73,7 +73,7 @@ namespace Game.Mod.Stormworks.Toolbox.Client.Windows.Presentation.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        [global::System.Configuration.DefaultSettingValueAttribute("400")]
         public double WindowOptions_Height {
             get {
                 return ((double)(this["WindowOptions_Height"]));

@@ -10,6 +10,12 @@
 
   <ItemGroup>
     <None Remove="appsettings.json" />
+    <None Remove="Images\icon.close.png" />
+    <None Remove="Images\icon.components.png" />
+    <None Remove="Images\icon.mods.png" />
+    <None Remove="Images\icon.settings.png" />
+    <None Remove="Images\icon.tiles.png" />
+    <None Remove="Images\icon.xml.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -19,16 +25,23 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Lexicom.Concentrate.Wpf.Amenities" Version="9.0.3" />
-    <PackageReference Include="Lexicom.Concentrate.Wpf.Controls" Version="9.0.3" />
-    <PackageReference Include="Lexicom.Concentrate.Wpf.Themes" Version="9.0.3" />
-    <PackageReference Include="Lexicom.Configuration.Settings.For.Wpf" Version="9.0.6" />
-    <PackageReference Include="Lexicom.DependencyInjection.Primitives.For.Wpf" Version="9.0.6" />
-    <PackageReference Include="Lexicom.Mvvm.For.Wpf" Version="9.0.6" />
-    <PackageReference Include="Lexicom.Validation.For.Wpf" Version="9.0.6" />
-    <PackageReference Include="Lexicom.Wpf.Amenities" Version="9.0.6" />
-    <PackageReference Include="Lexicom.Wpf.Controls" Version="9.0.6" />
-    <PackageReference Include="Lexicom.Wpf.ValueConverters" Version="9.0.6" />
+    <Resource Include="Images\icon.close.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Lexicom.Concentrate.Wpf.Amenities" Version="9.0.6" />
+    <PackageReference Include="Lexicom.Concentrate.Wpf.Controls" Version="9.0.6" />
+    <PackageReference Include="Lexicom.Concentrate.Wpf.Themes" Version="9.0.6" />
+    <PackageReference Include="Lexicom.Configuration.Settings.For.Wpf" Version="9.0.10" />
+    <PackageReference Include="Lexicom.DependencyInjection.Primitives.For.Wpf" Version="9.0.10" />
+    <PackageReference Include="Lexicom.Logging.For.Wpf" Version="9.0.10" />
+    <PackageReference Include="Lexicom.Mvvm.For.Wpf" Version="9.0.10" />
+    <PackageReference Include="Lexicom.Validation.For.Wpf" Version="9.0.10" />
+    <PackageReference Include="Lexicom.Wpf.Amenities" Version="9.0.10" />
+    <PackageReference Include="Lexicom.Wpf.Controls" Version="9.0.10" />
+    <PackageReference Include="Lexicom.Wpf.ValueConverters" Version="9.0.10" />
   </ItemGroup>
 
   <ItemGroup>
@@ -48,6 +61,24 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\icon.components.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\icon.mods.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\icon.settings.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\icon.tiles.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\icon.xml.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
 </Project>

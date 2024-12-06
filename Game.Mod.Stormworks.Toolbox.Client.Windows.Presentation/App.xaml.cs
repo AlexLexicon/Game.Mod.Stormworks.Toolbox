@@ -9,13 +9,16 @@ using Lexicom.Concentrate.Wpf.Themes.Extensions;
 using Lexicom.Configuration.Settings.For.Wpf.Extensions;
 using Lexicom.DependencyInjection.Primitives.Extensions;
 using Lexicom.DependencyInjection.Primitives.For.Wpf.Extensions;
+using Lexicom.Logging.For.Wpf.Extensions;
 using Lexicom.Mvvm.Amenities.Extensions;
 using Lexicom.Mvvm.Extensions;
 using Lexicom.Mvvm.For.Wpf.Extensions;
 using Lexicom.Supports.Wpf.Extensions;
+using Lexicom.Validation.Amenities.Extensions;
 using Lexicom.Validation.For.Wpf.Extensions;
 using Lexicom.Wpf.Amenities.Extensions;
 using Lexicom.Wpf.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace Game.Mod.Stormworks.Toolbox.Client.Windows.Presentation;
 public partial class App : System.Windows.Application
@@ -32,6 +35,8 @@ public partial class App : System.Windows.Application
         {
             l.AddSettings(Presentation.Properties.Settings.Default);
 
+            l.AddLogging(builder.Configuration);
+
             l.AddAmenities();
 
             l.AddMvvm(mvvm =>
@@ -41,11 +46,16 @@ public partial class App : System.Windows.Application
                     mr.AddTileEditor();
                 });
 
+                mvvm.AddViewModel<DomainToggleButtonViewModel>(ServiceLifetime.Transient);
                 mvvm.AddViewModel<MainWindowViewModel>(vm =>
                 {
                     vm.ForWindow<MainWindowView>();
                 });
                 mvvm.AddViewModel<RibbonViewModel>();
+                mvvm.AddViewModel<SettingsDatabaseViewModel>();
+                mvvm.AddViewModel<SettingsPreferencesViewModel>();
+                mvvm.AddViewModel<SettingsViewModel>();
+                mvvm.AddViewModel<StatusBarViewModel>();
             });
 
             l.AddPrimitives(p =>
@@ -56,7 +66,9 @@ public partial class App : System.Windows.Application
 
             l.AddValidation(v =>
             {
+                v.AddAmenities();
                 v.AddDatabase();
+                v.AddClient();
             });
 
             l.Concentrate(lc =>

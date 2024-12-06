@@ -9,11 +9,16 @@ public class SwToolboxDbContext : DbContext
         Database.EnsureCreated();
     }
 
-    public DbSet<Component> Blocks { get; set; }
-    public DbSet<ComponentToGameVersion> ComponentsToGameVersions { get; set; }
+    public DbSet<Component> Components { get; set; }
+    public DbSet<ComponentToImage> ComponentsToImage { get; set; }
+    public DbSet<ComponentToTag> ComponentsToTags { get; set; }
     public DbSet<GameVersion> GameVersions { get; set; }
-    public DbSet<ComponentTag> BlockTags { get; set; }
-    public DbSet<ComponentToComponentTag> ComponentsToComponentTags { get; set; }
+    public DbSet<GameVersionToComponent> GameVersionsToComponents { get; set; }
+    public DbSet<GameVersionToTile> GameVersionsToTiles { get; set; }
+    public DbSet<Image> Images { get; set; }
+    public DbSet<Tag> Tags { get; set; }
+    public DbSet<Tile> Tiles { get; set; }
+    public DbSet<TileToImage> TilesToImage { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

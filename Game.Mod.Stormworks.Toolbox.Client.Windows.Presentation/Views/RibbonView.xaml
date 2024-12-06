@@ -4,25 +4,101 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-    xmlns:local="clr-namespace:Game.Mod.Stormworks.Toolbox.Client.Windows.Presentation.Views"
+    xmlns:b="http://schemas.microsoft.com/xaml/behaviors"
+    xmlns:v="clr-namespace:Game.Mod.Stormworks.Toolbox.Client.Windows.Presentation.Views"
+    xmlns:vm="clr-namespace:Game.Mod.Stormworks.Toolbox.Client.Windows.ViewModels;assembly=Game.Mod.Stormworks.Toolbox.Client.Windows"
     mc:Ignorable="d"
+    d:DataContext="{d:DesignInstance vm:RibbonViewModel}"
     d:DesignWidth="800"
     Height="48">
-    
-    <DockPanel>
 
-        <Menu DockPanel.Dock="Left"/>
+    <Border 
+        Padding="8,0"
+        Background="{DynamicResource ThemeSurfaceFocusSoft}">
+        <DockPanel LastChildFill="False">
 
-        <StackPanel 
-            DockPanel.Dock="Right"
-            Orientation="Horizontal">
-            
-        </StackPanel>
-        
-        <StackPanel Orientation="Horizontal">
-            <Button Content="Components"/>
-            <Button Content="Tiles"/>
-        </StackPanel>
+            <ItemsControl 
+                DockPanel.Dock="Left"
+                ItemsSource="{Binding DomainToggleButtonViewModels}">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel Orientation="Horizontal"/>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <v:DomainToggleButtonView 
+                            Margin="0,0,8,0"
+                            DataContext="{Binding}"/>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
 
-    </DockPanel>
+            <Grid DockPanel.Dock="Right">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Border 
+                    x:Name="SettingsBorder"
+                    Padding="0,2,0,0"
+                    Grid.Row="0"
+                    CornerRadius="6">
+                    
+                    <b:Interaction.Triggers>
+                        <b:EventTrigger EventName="MouseUp">
+                            <b:InvokeCommandAction Command="{Binding ShowSettingsCommand}"/>
+                        </b:EventTrigger>
+                    </b:Interaction.Triggers>
+                    
+                    <DockPanel>
+                        <Label
+                            DockPanel.Dock="Left"
+                            Width="15" 
+                            Height="15"
+                            Margin="0,2,0,0">
+                            <Label.OpacityMask>
+                                <ImageBrush ImageSource="/Game.Mod.Stormworks.Toolbox.Client.Windows.Presentation;component/Images/icon.settings.png"/>
+                            </Label.OpacityMask>
+                            <Label.Style>
+                                <Style TargetType="Label" BasedOn="{StaticResource BasicLabelStyle}">
+                                    <Setter Property="Background" Value="{DynamicResource ThemeInteriorSecondaryHard}"/>
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding Path=IsMouseOver, ElementName=SettingsBorder}" Value="True">
+                                            <Setter Property="Background" Value="{DynamicResource ThemeInteriorFocusHard}"/>
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Label.Style>
+                        </Label>
+                        <Label 
+                            HorizontalContentAlignment="Left"
+                            Padding="4,0,0,0">
+                            <Label.Style>
+                                <Style TargetType="Label" BasedOn="{StaticResource BasicLabelStyle}">
+                                    <Setter Property="Foreground" Value="{DynamicResource ThemeInteriorPrimarySoft}"/>
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding Path=IsMouseOver, ElementName=SettingsBorder}" Value="True">
+                                            <Setter Property="Foreground" Value="{DynamicResource ThemeInteriorFocusSoft}"/>
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Label.Style>
+                            <TextBlock Text="Settings" TextTrimming="CharacterEllipsis"/>
+                        </Label>
+                    </DockPanel>
+                </Border>
+
+                <Label
+                    Grid.Row="1"
+                    Padding="0,0,0,2"
+                    FontSize="12"
+                    HorizontalContentAlignment="Right"
+                    Foreground="{DynamicResource ThemeInteriorSecondaryHard}"
+                    d:Content="Version 1.2"
+                    Content="Version 1.2"/>
+            </Grid>
+        </DockPanel>
+    </Border>
 </UserControl>

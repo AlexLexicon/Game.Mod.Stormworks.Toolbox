@@ -6,16 +6,16 @@
       <Value Profile="(Default)">light</Value>
     </Setting>
     <Setting Name="WindowOptions_Top" Type="System.Double" Scope="User">
-      <Value Profile="(Default)">0</Value>
+      <Value Profile="(Default)">128</Value>
     </Setting>
     <Setting Name="WindowOptions_Left" Type="System.Double" Scope="User">
-      <Value Profile="(Default)">0</Value>
+      <Value Profile="(Default)">128</Value>
     </Setting>
     <Setting Name="WindowOptions_Width" Type="System.Double" Scope="User">
-      <Value Profile="(Default)">0</Value>
+      <Value Profile="(Default)">800</Value>
     </Setting>
     <Setting Name="WindowOptions_Height" Type="System.Double" Scope="User">
-      <Value Profile="(Default)">0</Value>
+      <Value Profile="(Default)">400</Value>
     </Setting>
     <Setting Name="WindowOptions_IsMaximized" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>

@@ -7,8 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Lexicom.Validation.Amenities" Version="9.0.6" />
-    <PackageReference Include="Lexicom.Validation.Options" Version="9.0.6" />
+    <PackageReference Include="Lexicom.Validation.Amenities" Version="9.0.10" />
+    <PackageReference Include="Lexicom.Validation.Options" Version="9.0.10" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="9.0.0" />
   </ItemGroup>
 

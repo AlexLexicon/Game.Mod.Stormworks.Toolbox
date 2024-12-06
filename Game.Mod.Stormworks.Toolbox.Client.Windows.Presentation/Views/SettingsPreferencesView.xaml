@@ -1,0 +1,30 @@
+﻿<UserControl 
+    x:Class="Game.Mod.Stormworks.Toolbox.Client.Windows.Presentation.Views.SettingsPreferencesView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:b="http://schemas.microsoft.com/xaml/behaviors"
+    xmlns:c="clr-namespace:Game.Mod.Stormworks.Toolbox.Client.Windows.Presentation.Controls"
+    xmlns:vm="clr-namespace:Game.Mod.Stormworks.Toolbox.Client.Windows.ViewModels;assembly=Game.Mod.Stormworks.Toolbox.Client.Windows"
+    mc:Ignorable="d" 
+    d:DataContext="{d:DesignInstance vm:SettingsPreferencesViewModel}"
+    d:DesignWidth="800"
+    d:DesignHeight="450">
+
+    <StackPanel d:Background="{DynamicResource ThemeSurfacePrimarySoft}">
+        <Label 
+            Content="Preferences"
+            Style="{StaticResource SectionHeaderLabel}"/>
+
+        <StackPanel Margin="16,0,0,0">
+
+            <c:SettingsComboBox
+                Title="Color Theme:"
+                Values="{Binding Themes}"
+                SelectedValue="{Binding SelectedTheme, Mode=TwoWay}"
+                SelectedValueChangedCommand="{Binding ThemeSelectedCommand}"/>
+
+        </StackPanel>
+    </StackPanel>
+</UserControl>
